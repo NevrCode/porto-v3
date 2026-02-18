@@ -27,7 +27,23 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiSpring,
+  SiFlutter,
+  SiPostgresql,
+  SiSpringboot,
+  SiGo,
+  SiTensorflow,
+  SiKeras,
+  SiScikitlearn,
+  SiFlask,
+  SiMysql,
+  SiOpencv
+
 } from "react-icons/si";
+
+import  {
+  DiJava,
+} from "react-icons/di";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
 
@@ -58,12 +74,24 @@ export const iconLibrary: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  spring: SiSpring,
+  postgresql: SiPostgresql,
+  springboot: SiSpringboot,
+  go: SiGo,
+  tensorflow : SiTensorflow,
+  keras : SiKeras,
+  scikitlearn : SiScikitlearn,
+  flask : SiFlask,
+  flutter : SiFlutter,
+  mysql : SiMysql,
+  opencv : SiOpencv,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  java : DiJava,
 };
 
 export type IconLibrary = typeof iconLibrary;

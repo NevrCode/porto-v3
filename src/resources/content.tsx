@@ -108,7 +108,7 @@ const about: About = {
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true, 
     title: "Work Experience",
     experiences: [
       {
@@ -158,12 +158,12 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true, 
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Bunda Mulia University",
+        description: <>Studied Informatics Technology.</>,
       },
       {
         name: "Build the Future",
@@ -172,7 +172,7 @@ const about: About = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true, 
     title: "Technical skills",
     skills: [
       {
@@ -203,22 +203,49 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Spring Framework",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+          <>Building RESTful APIs with Spring Boot, including JWT authentication, PostgreSQL integration, and clean code practices.</>),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Java",
+            icon: "java",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Spring",
+            icon: "spring",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "PostgreSQL",
+            icon: "postgresql",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "FLutter",
+        description: (
+          <>Building cross platform Application that Followed Material Design principles and responsive UI patterns.</>),
+        tags: [
+          {
+            name: "Flutter",
+            icon: "flutter",
+          },
+          {
+            name: "Spring",
+            icon: "spring",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgresql",
           },
         ],
         // optional: leave the array empty if you don't want to display images
