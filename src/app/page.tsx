@@ -10,11 +10,20 @@ import {
   Schema,
   Meta,
   Line,
+  GlitchFx,
+  BlockQuote,
+  ScrollToTop,
+  Card,
+  Media,
+  Icon,
+  FlipFx,
+  Flex,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
+import { Mailchimp, TechCard } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import { TechSection } from "@/components/TechSection";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -53,37 +62,51 @@ export default function Home() {
               paddingLeft="12"
             >
               <Badge
+                id="badge-3"
                 background="brand-alpha-weak"
-                paddingX="12"
-                paddingY="4"
-                onBackground="neutral-strong"
-                textVariant="label-default-s"
-                arrow={false}
+                title="My Work"
                 href={home.featured.href}
-              >
-                <Row paddingY="2">{home.featured.title}</Row>
-              </Badge>
+              />
             </RevealFx>
           )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+
+          <RevealFx
+            translateY="4"
+            fillWidth
+            horizontal="center"
+            paddingBottom="16"
+          >
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+          <RevealFx
+            translateY="8"
+            delay={0.2}
+            fillWidth
+            horizontal="center"
+            paddingBottom="32"
+          >
+            <Text
+              wrap="balance"
+              onBackground="neutral-weak"
+              variant="heading-default-xl"
+            >
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
-            <Button
+
+          <RevealFx
+            paddingTop="12"
+            delay={0.4}
+            horizontal="center"
+            paddingLeft="12"
+          >
+            <Badge
               id="about"
               data-border="rounded"
               href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
+              background="transparent"
             >
               <Row gap="8" vertical="center" paddingRight="4">
                 {about.avatar.display && (
@@ -96,14 +119,35 @@ export default function Home() {
                 )}
                 {about.title}
               </Row>
-            </Button>
+            </Badge>
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
+      </RevealFx> */}
+      <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
+        {routes["/work"] && (
+          <Column fillWidth gap="24" marginBottom="l">
+            <Row fillWidth paddingRight="64">
+              <Line maxWidth={48} />
+            </Row>
+            <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
+              <Row flex={1} paddingLeft="l" paddingTop="24">
+                <Heading as="h2" variant="display-strong-xs" wrap="balance">
+                  Latest Works
+                </Heading>
+              </Row>
+              <Projects range={[1, 2]} />
+            </Row>
+            
+            <Row fillWidth paddingLeft="64" horizontal="end">
+              <Line maxWidth={48} />
+            </Row>
+          </Column>
+        )}
       </RevealFx>
-      {routes["/blog"] && (
+      {/* {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
             <Line maxWidth={48} />
@@ -122,9 +166,38 @@ export default function Home() {
             <Line maxWidth={48} />
           </Row>
         </Column>
-      )}
-      <Projects range={[2]} />
-      <Mailchimp />
+      )} */}
+      <Row maxWidth={24}></Row>
+      {/* <Mailchimp /> */}
+      
+      <BlockQuote
+        align="left"
+        separator="top"
+        author={{
+          name: "Albert Einstein",
+        }}
+        subline=""
+      >
+        “Insanity is doing the same thing over and over again and expecting
+        different results.”
+      </BlockQuote>
+      <BlockQuote
+        align="right"
+        separator="top"
+        author={{
+          name: "Matthew 6:33",
+        }}
+        subline=""
+      >
+        “But seek first the kingdom of God and His righteousness, and all these
+        things shall be added to you.”
+      </BlockQuote>
+      <TechSection/>
+      <ScrollToTop position="relative" className="my-custom-style">
+        <Button size="s" variant="secondary" prefixIcon="chevronUp">
+          Top
+        </Button>
+      </ScrollToTop>
     </Column>
   );
 }

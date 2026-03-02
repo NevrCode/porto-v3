@@ -77,11 +77,11 @@ export const Header = () => {
         </Row>
         <Row fillWidth horizontal="center">
           <Row
-            background="page"
+            background="surface"
             border="neutral-alpha-weak"
             radius="m-4"
             shadow="l"
-            padding="4"
+            padding="12"
             horizontal="center"
             zIndex={1}
           >
@@ -128,7 +128,8 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              {routes["/blog"] && (
+              
+              {/* {routes["/blog"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
@@ -146,8 +147,8 @@ export const Header = () => {
                     />
                   </Row>
                 </>
-              )}
-              {routes["/gallery"] && (
+              )} */}
+              {/* {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
@@ -165,7 +166,7 @@ export const Header = () => {
                     />
                   </Row>
                 </>
-              )}
+              )} */}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

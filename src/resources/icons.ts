@@ -27,6 +27,7 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPython,
   SiSpring,
   SiFlutter,
   SiPostgresql,
@@ -92,6 +93,7 @@ export const iconLibrary: Record<string, IconType> = {
   telegram: FaTelegram,
   instagram: FaInstagram,
   java : DiJava,
+  python : SiPython,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -9,6 +9,11 @@ type Team = {
   linkedIn: string;
 };
 
+type Tag = {
+  name: string;
+  icon: string;
+};
+
 type Metadata = {
   title: string;
   subtitle?: string;
@@ -16,7 +21,7 @@ type Metadata = {
   summary: string;
   image?: string;
   images: string[];
-  tag?: string;
+  tag?: Tag[];
   team: Team[];
   link?: string;
 };
@@ -38,7 +43,7 @@ function readMDXFile(filePath: string) {
 
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(rawContent);
-
+ // atur ini brok kalo ubah ubah
   const metadata: Metadata = {
     title: data.title || "",
     subtitle: data.subtitle || "",
