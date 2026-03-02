@@ -29,6 +29,35 @@ export type Person = {
   languages?: string[];
 };
 
+// export type Project = {
+//   /** Title of the project */
+//   title: string;
+//   /** Description of the project */
+//   description: string;
+//   /** URL to the project or case study */
+//   link?: string;
+//   /** List of image URLs related to the project */
+//   images?: Array<{
+//         /** Image source path */
+//         src: string;
+//         /** Image alt text */
+//         alt: string;
+//         /** Image width ratio */
+//         width: number;
+//         /** Image height ratio */
+//         height: number;
+//       }>;
+//   /** List of team members or contributors with their avatar images */
+//   avatars?: { src: string }[];
+//   /** Detailed content or case study for the project */
+//   content?: string;
+  
+//   techs?: Array<{
+//     name: string;
+//     icon?: string;
+//   }>;
+// };
+
 /**
  * Newsletter Section
  * @description The below information will be displayed on the Home page in Newsletter block
@@ -62,6 +91,15 @@ export type Social = Array<{
   /** Whether this social link is essential and should be displayed on the about page */
   essential?: boolean;
 }>;
+
+export type Tech = Array<{
+  /** Name of the technology */
+  name: string;
+  icon?: string;
+
+}>;
+
+
 
 /**
  * Base interface for page configuration with common properties.
@@ -171,10 +209,12 @@ export interface About extends BasePageConfig {
     display: boolean;
     /** Title for the studies section */
     title: string;
+    
     /** List of institutions attended */
     institutions: Array<{
       /** Institution name */
       name: string;
+      grade: number;
       /** Description of studies */
       description: React.ReactNode;
     }>;
@@ -210,7 +250,6 @@ export interface About extends BasePageConfig {
     }>;
   };
 }
-
 /**
  * Blog page configuration.
  * @description Configuration for the Blog page, including metadata and navigation label.

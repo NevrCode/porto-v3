@@ -1,12 +1,12 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
+import { About, Blog, Gallery, Home, Newsletter, Person,  Social, Tech, Work } from "@/types";
+import { GlitchFx, Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Kevin",
   lastName: "Valentino",
   name: `Kevin Valentino`,
   role: "Backend Developer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatars.jpeg",
   email: "kevin12keval@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
@@ -60,7 +60,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building reliable systems — from <Text as="span" onBackground="brand-weak" >REST API</Text>  to <Text as="span" onBackground="danger-medium" >real-time monitoring</Text></>,
+  headline: <>Building reliable systems — from <GlitchFx speed="medium"><Text as="span" onBackground="brand-weak" >REST API</Text></GlitchFx>   to <Text as="span" onBackground="danger-medium" >real-time monitoring</Text></>,
   featured: {
     display: true,
     title: (
@@ -131,12 +131,12 @@ const about: About = {
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
@@ -160,14 +160,12 @@ const about: About = {
   studies: {
     display: true, 
     title: "Studies",
+   
     institutions: [
-      {
+      { 
+        grade: 3.88,
         name: "Bunda Mulia University",
         description: <>Studied Informatics Technology.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
       },
     ],
   },
@@ -175,33 +173,33 @@ const about: About = {
     display: true, 
     title: "Technical skills",
     skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
+      // {
+      //   title: "Figma",
+      //   description: (
+      //     <>Able to prototype in Figma with Once UI with unnatural speed.</>
+      //   ),
+      //   tags: [
+      //     {
+      //       name: "Figma",
+      //       icon: "figma",
+      //     },
+      //   ],
+      //   // optional: leave the array empty if you don't want to display images
+      //   images: [
+      //     {
+      //       src: "/images/projects/project-01/cover-02.jpg",
+      //       alt: "Project image",
+      //       width: 16,
+      //       height: 9,
+      //     },
+      //     {
+      //       src: "/images/projects/project-01/cover-03.jpg",
+      //       alt: "Project image",
+      //       width: 16,
+      //       height: 9,
+      //     },
+      //   ],
+      // },
       {
         title: "Spring Framework",
         description: (
@@ -220,47 +218,79 @@ const about: About = {
             icon: "postgresql",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        title: "FLutter",
+        title: "Flutter",
         description: (
           <>Building cross platform Application that Followed Material Design principles and responsive UI patterns.</>),
         tags: [
           {
             name: "Flutter",
             icon: "flutter",
-          },
-          {
-            name: "Spring",
-            icon: "spring",
-          },
-          {
-            name: "PostgreSQL",
-            icon: "postgresql",
-          },
+          }
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],
   },
 };
+
+const tech :Tech = [
+  {
+    name: "Java",
+    icon: "java",
+  },{
+    name: "Go",
+    icon: "go",
+  },
+  {
+    name: "Python",
+    icon: "python",
+  },
+  {
+    name: "Spring",
+    icon: "spring",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "postgresql",
+  },
+  {
+    name: "Figma",
+    icon: "figma",
+  },
+  {
+    name: "Flutter",
+    icon: "flutter",
+  },
+  {
+    name: "MySQL",
+    icon: "mysql",
+  },
+  
+  {
+    name: "TensorFlow",
+    icon: "tensorflow", 
+  },
+  {
+    name: "Keras",
+    icon: "keras",}
+]
 
 const blog: Blog = {
   path: "/blog",
@@ -270,6 +300,7 @@ const blog: Blog = {
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
+
 
 const work: Work = {
   path: "/work",
@@ -331,4 +362,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, tech };

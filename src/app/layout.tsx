@@ -8,6 +8,7 @@ import {
   Background,
   Column,
   Flex,
+  MatrixFx,
   Meta,
   opacity,
   RevealFx,
@@ -114,7 +115,19 @@ export default async function RootLayout({
           horizontal="center"
         >
           <RevealFx fill position="absolute">
-            <Background
+            <MatrixFx
+              height={54}
+              colors={["brand-alpha-strong", "brand-alpha-medium", "neutral-alpha-strong"]}
+              trigger="mount"
+              flicker
+              bulge={{
+              type: "wave",    
+              duration: 8,
+              intensity: 10,
+              repeat: true
+            }}
+            />
+            {/* <Background
               mask={{
                 x: effects.mask.x,
                 y: effects.mask.y,
@@ -153,7 +166,7 @@ export default async function RootLayout({
                 angle: effects.lines.angle,
                 color: effects.lines.color,
               }}
-            />
+            /> */}
           </RevealFx>
           <Flex fillWidth minHeight="16" s={{ hide: true }} />
           <Header />

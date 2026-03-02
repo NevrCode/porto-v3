@@ -1,0 +1,127 @@
+---
+title: "Building Spice Classification Application using Deep Learning"
+publishedAt: "2025-04-03"
+summary: "Spice Classification"
+images:
+  - "/images/projects/spice-classification-project/2shots_so.png"
+  - "/images/projects/spice-classification-project/1shots_so.png"
+tag:
+  - name: "Keras"
+    icon: "keras"
+  - name: "OpenCV"
+    icon: "opencv"
+team:
+  - name: "Kevin Valentino"
+    role: "Machine Learning Engineer"
+    avatar: "/images/avatars.jpeg"
+    linkedIn: "https://www.linkedin.com/in/kevin-valentino-87254a1a1/"
+---
+
+
+## Overview
+
+Development of a deep learning–based image classification system designed to distinguish visually similar spice roots. The model identifies five commonly confused spices — ginger, turmeric, kencur, temulawak, and galangal — using image input captured from real-world conditions.
+
+This project focuses on solving a practical recognition problem where manual identification is difficult due to strong visual similarity in color, texture, and shape.
+
+## Key Features
+
+- Multi-Class Spice Classification
+Classifies five spice categories from image input with high accuracy.
+
+- Custom Real-World Dataset
+Built a dataset of approximately 20,000 images captured manually to reflect natural lighting and real usage conditions.
+
+- Robust Image Augmentation
+Applied rotation, flipping, brightness, and contrast adjustments to improve generalization.
+
+- Feature Learning from Raw Images
+Implemented a CNN-based model capable of extracting subtle visual differences between highly similar objects.
+
+- Production-Oriented Input Pipeline
+Standardized preprocessing workflow with consistent input size and normalization.
+
+
+## Technologies Used
+
+- TensorFlow / Keras — Model development and training
+
+- InceptionV2 Architecture — Feature extraction and classification
+
+- Python — Data processing and training pipeline
+
+## Dataset
+- Classes: Jahe, Lengkuas, Kencur, Temulawak, kunyit
+- Total Images: ~20,000
+- Input Size: 224 × 224
+- Source: Manually captured images
+- Dataset Challenges:
+    - highly similar color and texture between classes
+    - overlapping physical shapes
+    - lighting variability during capture
+
+## Model Training
+
+- Architecture: InceptionV2
+- Training Epochs: 50–100
+- Batch Size: 32
+- Data Augmentation:
+    - Rotation
+    - Horizontal flip
+    - Brightness adjustment
+    - Contrast adjustment
+- Training Strategy: Trained from scratch without transfer learning.
+
+## System Pipeline
+
+Image Input
+→ Image Resizing (224 × 224)
+→ Normalization & Preprocessing
+→ CNN Feature Extraction (InceptionV2)
+→ Dense Classification Layer
+→ Predicted Spice Category
+
+This pipeline ensures consistent input representation and reliable prediction across varying lighting and object conditions.
+
+
+
+## Results
+
+![Result Image](/images/projects/spice-classification-project/matrix-result.jpg "Model Result")
+
+- Overall Accuracy: 96%
+- Average Precision / Recall: 95–96% across all classes
+- Confusion Matrix Insight:
+    - Very high precision for kunyit and temulawak (~99%).
+    - Performance remains balanced across all classes, indicating stable generalization.
+    - No significant overfitting observed, as classification performance remains consistently high.
+    - These results show the model successfully learned subtle visual differences despite strong similarity between spice types.
+
+## Challenges and Learnings
+
+- High Visual Similarity
+Many spice classes share nearly identical visual characteristics, making feature separation difficult.
+
+- Lighting Variability
+Natural capture conditions introduced brightness and contrast variation that required strong augmentation.
+
+- Intra-Class Variation
+Each spice sample has unique physical characteristics, increasing classification complexity.
+
+- Training Without Transfer Learning
+Training from scratch required careful dataset preparation and optimization to achieve stable convergence.
+
+This project strengthened my understanding of computer vision pipelines, dataset engineering, and practical model training strategies.
+
+## Outcome
+
+The system demonstrates that deep learning can reliably distinguish natural objects with minimal visual differences using properly structured data and training strategies.
+
+This project highlights practical machine learning engineering skills, including dataset creation, model training, evaluation, and deployment-oriented pipeline design.
+
+## Why This Project Matters
+
+Training a model to distinguish spices might sound simple — until they all look almost identical.
+This project demonstrates how structured data preparation and model design can turn subtle visual differences into reliable predictions.
+
+It reflects my approach to engineering: build systems that work in real-world conditions, not just ideal datasets.

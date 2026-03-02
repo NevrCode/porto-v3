@@ -1,0 +1,97 @@
+---
+title: "Building Expense Tracker Application (REST API)"
+publishedAt: "2026-01-05"
+summary: "Focused on Spring Security, Authentication and Spring Best Practice"
+images:
+  - "/images/projects/expense-tracker-project/def.png"
+tag:
+  - name: "Spring"
+    icon: "spring"
+  - name: "PostgreSQL"
+    icon: "postgresql"
+team:
+  - name: "Kevin Valentino"
+    role: "Software Engineer"
+    avatar: "/images/avatars.jpeg"
+    linkedIn: "https://www.linkedin.com/in/kevin-valentino-87254a1a1/"
+---
+
+## Overview
+
+This project is a backend REST API for an expense tracking application designed to manage personal financial records securely and efficiently. The system focuses on authentication, structured data management, and clean backend architecture using Spring Boot and PostgreSQL.
+
+The goal of this project was to build a production-style backend service that demonstrates best practices in API design, authentication, and data persistence while maintaining scalability and maintainability.
+
+## Problem 
+
+Many simple expense tracking applications store data without proper structure, security, or scalability considerations. This project addresses those limitations by implementing a structured backend system with secure authentication and clearly defined data relationships.
+
+The system is designed to :
+- securely manage user accounts 
+- store categorized expense records
+- provide reliable data access through REST endpoints
+- maintain clean separation between business logic and persistance layer
+
+## Solution Architecture
+The application follows a layered backend architecture:
+
+Client → Controller Layer → Service Layer → Repository Layer → Database
+Key architectural principles:
+
+- separation of concerns
+- stateless authentication
+- DTO-based data transfer
+- structured exception handling
+- secure endpoint access
+
+Authentication is implemented using Spring Security, ensuring that each user can only access their own financial data.
+
+## Core Features
+
+- User registration and authentication
+- Secure REST API endpoints
+- Expense creation, update, and deletion
+- Categorized expense management
+- PostgreSQL relational data storage
+- Structured validation and error handling
+
+
+## Authentication & Security
+
+Security is a core focus of this project. The system uses Spring Security to protect endpoints and manage authentication workflows.
+
+Key implementations:
+- secure login flow
+- password encryption
+- protected API routes
+- user-based data access control
+
+This ensures that expense data is isolated per user and cannot be accessed without proper authentication.
+
+## Database Design
+
+The system uses PostgreSQL with a relational schema designed for clarity and scalability.
+
+Main entities include:
+- User
+- Expense
+- Category
+- Budget
+
+The schema supports structured queries and efficient data retrieval, which is essential for financial record management.
+
+## Engineering Highlights
+
+This project emphasizes backend engineering practices rather than UI implementation.
+
+Key technical highlights:
+- clean layered architecture
+- structured API response design
+- secure authentication workflow
+- maintainable service logic
+- production-style backend structure
+
+The implementation reflects my focus on building backend systems that are reliable, structured, and ready for real-world deployment.
+
+
+Built with a focus on clean architecture, secure data handling, and backend systems that quietly do their job well.

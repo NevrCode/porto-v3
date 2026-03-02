@@ -1,6 +1,7 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+import { ProjectWork } from "@/components/work/ProjectWork";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -31,7 +32,7 @@ export default function Work() {
       <Heading marginBottom="l" variant="heading-strong-xl" align="center">
         {work.title}
       </Heading>
-      <Projects />
+      <ProjectWork />
     </Column>
   );
 }
