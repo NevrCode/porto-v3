@@ -217,6 +217,10 @@ const about: About = {
             name: "PostgreSQL",
             icon: "postgresql",
           },
+          {
+            name: "MySQL",
+            icon: "mysql",
+          }
         ],
         images: [
           // {
