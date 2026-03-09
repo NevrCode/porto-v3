@@ -1,4 +1,14 @@
-import { About, Blog, Gallery, Home, Newsletter, Person,  Social, Tech, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Tech,
+  Work,
+} from "@/types";
 import { GlitchFx, Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -60,7 +70,20 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building reliable systems — from <GlitchFx speed="medium"><Text as="span" onBackground="brand-weak" >REST API</Text></GlitchFx>   to <Text as="span" onBackground="danger-medium" >real-time monitoring</Text></>,
+  headline: (
+    <>
+      Building reliable systems — from{" "}
+      <GlitchFx speed="medium">
+        <Text as="span" onBackground="brand-weak">
+          REST API
+        </Text>
+      </GlitchFx>{" "}
+      to{" "}
+      <Text as="span" onBackground="danger-medium">
+        real-time monitoring
+      </Text>
+    </>
+  ),
   featured: {
     display: true,
     title: (
@@ -74,8 +97,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm {person.firstName}, a Backend developer specializing in scalable APIs, real-time data processing, <br /> and intelligent system integration.
-</>
+      I'm {person.firstName}, a Backend developer specializing in scalable APIs,
+      real-time data processing, <br /> and intelligent system integration.
+    </>
   ),
 };
 
@@ -100,15 +124,16 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Backend developer with solid experience in building scalable RESTful APIs using Gin (Go lang), 
-        Spring Boot (java) and managing relational databases such as MySQL and PostgreSQL. 
-        Proficient in designing efficient database schemas, 
-        optimizing SQL queries, and applying clean coding principles. Comfortable working in agile teams.
+        Backend developer with solid experience in building scalable RESTful
+        APIs using Gin (Go lang), Spring Boot (java) and managing relational
+        databases such as MySQL and PostgreSQL. Proficient in designing
+        efficient database schemas, optimizing SQL queries, and applying clean
+        coding principles. Comfortable working in agile teams.
       </>
     ),
   },
   work: {
-    display: true, 
+    display: true,
     title: "Work Experience",
     experiences: [
       {
@@ -117,16 +142,22 @@ const about: About = {
         role: "Backend Engineer",
         achievements: [
           <>
-            Designed and developed a RESTful backend service using Spring Boot and Spring Data JPA to manage user data and authentication for a web application.
+            Designed and developed a RESTful backend service using Spring Boot
+            and Spring Data JPA to manage user data and authentication for a web
+            application.
           </>,
           <>
-            Implemented JWT-based authentication and authorization with Spring Security (Filter and Provider)
+            Implemented JWT-based authentication and authorization with Spring
+            Security (Filter and Provider)
           </>,
           <>
-            Built CRUD REST APIs with PostgreSQL database integration, pagination, DTO pattern, global exception handling, and validation.
+            Built CRUD REST APIs with PostgreSQL database integration,
+            pagination, DTO pattern, global exception handling, and validation.
           </>,
           <>
-           Followed layered architecture (Controller, Service, Repository) and clean code principles to ensure maintainability and scalability of the backend service.
+            Followed layered architecture (Controller, Service, Repository) and
+            clean code principles to ensure maintainability and scalability of
+            the backend service.
           </>,
         ],
         images: [
@@ -141,16 +172,40 @@ const about: About = {
       },
       {
         company: "Personal Projects",
-        timeframe: "August 2023 - 2024",
-        role: "Mobile Developer",
+        timeframe: "August 2024 - December 2024",
+        role: "Machine Learning Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed an image classification model using TensorFlow and Keras
+            to identify multiple spice types based on visual characteristics
+            such as color, texture, and shape.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Fine-tuned a pre-trained MobileNetV2 model using transfer learning
+            to improve classification performance on a custom spice dataset.
+          </>,
+          <>
+            Built a preprocessing pipeline including image resizing,
+            normalization, and data augmentation to improve model
+            generalization.
+          </>,
+          <>
+            Achieved 96% classification accuracy with high precision and recall
+            across multiple spice categories including ginger, turmeric, and
+            related spices.
+          </>,
+          <>
+            Designed the system to support real-time detection from video
+            streams with bounding boxes for spice localization and
+            classification.
+          </>,
+          <>
+            Developed a design system that unified the brand across multiple
+            platforms, improving
+          </>,
+          <>
+            Implemented model evaluation using confusion matrix and performance
+            metrics to analyze class-level prediction accuracy.
           </>,
         ],
         images: [],
@@ -158,11 +213,11 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, 
+    display: true,
     title: "Studies",
-   
+
     institutions: [
-      { 
+      {
         grade: 3.88,
         name: "Bunda Mulia University",
         description: <>Studied Informatics Technology.</>,
@@ -170,7 +225,7 @@ const about: About = {
     ],
   },
   technical: {
-    display: true, 
+    display: true,
     title: "Technical skills",
     skills: [
       // {
@@ -203,7 +258,11 @@ const about: About = {
       {
         title: "Spring Framework",
         description: (
-          <>Building RESTful APIs with Spring Boot, including JWT authentication, PostgreSQL integration, and clean code practices.</>),
+          <>
+            Building RESTful APIs with Spring Boot, including JWT
+            authentication, PostgreSQL integration, and clean code practices.
+          </>
+        ),
         tags: [
           {
             name: "Java",
@@ -230,12 +289,16 @@ const about: About = {
       {
         title: "Flutter",
         description: (
-          <>Building cross platform Application that Followed Material Design principles and responsive UI patterns.</>),
+          <>
+            Building cross platform Application that Followed Material Design
+            principles and responsive UI patterns.
+          </>
+        ),
         tags: [
           {
             name: "Flutter",
             icon: "flutter",
-          }
+          },
         ],
         images: [
           // {
@@ -250,11 +313,12 @@ const about: About = {
   },
 };
 
-const tech :Tech = [
+const tech: Tech = [
   {
     name: "Java",
     icon: "java",
-  },{
+  },
+  {
     name: "Go",
     icon: "go",
   },
@@ -282,15 +346,16 @@ const tech :Tech = [
     name: "MySQL",
     icon: "mysql",
   },
-  
+
   {
     name: "TensorFlow",
-    icon: "tensorflow", 
+    icon: "tensorflow",
   },
   {
     name: "Keras",
-    icon: "keras",}
-]
+    icon: "keras",
+  },
+];
 
 const blog: Blog = {
   path: "/blog",
@@ -300,7 +365,6 @@ const blog: Blog = {
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
-
 
 const work: Work = {
   path: "/work",
